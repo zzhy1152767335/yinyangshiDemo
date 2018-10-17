@@ -1,0 +1,270 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.wrap {
+	background-color: #222222;
+}
+.header {
+	width: 100%;
+	height: 26px;
+	background-color: white;
+	position: relative;
+	line-height: 40px;
+	float: left;
+}
+.header .logo {
+	float: left;
+	margin-left: 300px;
+	margin-top: -7px;
+}
+
+.tubiao {
+	float: left;
+	height: 40px;
+	margin: -4px 20px 0 350px;
+	position: relative;
+	
+}
+.tubiao  span .img2 {
+	position: absolute;
+	right: -10px;
+	top: 15px;
+	
+}
+.tubiao  span .img1 {
+	position: absolute;
+	left: -15px;
+	top: 13px;
+	
+}
+.tubiao span {
+	margin-right: 10px;
+}
+.tubiao span a {
+	text-decoration: none;
+	color: #828282;
+}
+.section {
+	width: 100%;
+	height: 600px;
+	background: url(./images/29.jpg) no-repeat;
+}
+.xz {
+	width: 200px;
+	height: 90px;
+	background-color: #390D10;
+	position: absolute;
+	right: 900px;
+	top: 300px;
+	float: left;
+}
+.erweima {
+	width:100px;
+	height: 90px;
+	float: left;
+}
+.xz .xiazai {
+	float: right;
+	width: 90px;
+	height: 90px;
+}
+.xz .xiazai .bo {
+	margin: 7px 0 5px -3px;
+
+}
+.xz .xiazai .andriod {
+	width: 70px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 7px;
+	padding-left: 10px;
+	background-color: #212223;
+}
+.xz .xiazai .ios {
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+	border-radius: 7px;
+	background-color: #212223;
+}
+.xz .xiazai .pc {
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 7px;
+	padding-left: 20px;
+	/*margin-left: 30px;*/
+	background-color: #212223;
+}
+.xz .xiazai .bo a {
+	color:white;
+	text-decoration: none;
+}
+.center {
+	width: 1000px;
+	height: 260px;
+	background-color: #222222;
+	margin: 0 auto;
+	margin-top: 27px;
+	position: relative;
+}
+.c-left {
+	width: 290px;
+    float: left;
+}
+.c-middle {
+	width: 290px;
+	height: 260px;
+	margin-left: 3px;
+	float: left;
+}
+
+.c-left .xin {
+	width: 272px;
+	height:20px;
+	position: relative;
+}
+.c-left .xin ul {
+	width: 272px;
+	height:20px;
+}
+.c-left .xin ul li {
+	width: 31%;
+	height: 20px;
+	display: inline-block;
+	color: white;
+}
+.c-left .xin ul li a {
+	color: #fff;
+	display: inline-block;
+	height: 20px;
+	padding-top: 1px;
+}
+.c-left .xin img {
+	position: absolute;
+	right: 2px;
+	top: -1px;
+}
+.c-l-bottom {
+	font-size: 12px;
+	padding-top: 16px;
+}
+#one>p>span,#two>p>span,#three>p>span{
+	color: #fff;
+}
+.c-middle{
+    width: 290px;
+	height: 260px;
+	overflow: hidden;
+	position: relative;
+}
+.c-middle>#middle {
+	width: 870px;
+	height: 260px;
+	position: relative;
+}
+.c-middle>#middle>img {
+	width: 290px;
+	height: 260px;
+	float: left;
+}
+.c-middle>#quan1 {
+   width: 100px;
+   height: 20px;
+   line-height: 20px;
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   text-align: center;
+   background-color: #fff;
+   opacity: 0.5;
+   border-radius: 10px;
+}
+
+.c-middle>#quan1 span {
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	line-height: 15px;
+	margin-left: 5px;
+	background-color: #ccc;
+	text-align: center;
+	border-radius: 50%;
+}
+.c-middle>#quan1>.current {
+	background-color: yellow;
+}
+.c-middle> a {
+	font-size: 60px;
+	text-decoration: none;
+	position: absolute;
+	top: 100px;
+	right:255px;
+	font-weight: bolder;
+	color: #ccc;
+}
+.c-middle> a:last-child{
+    right: 5px;
+}
+.c-right {
+	width: 272px;
+	height: 260px;
+	margin-left: 3px;
+	float: left;
+	background-color: #333333;
+	position: relative;
+}
+.c-right h2 {
+	margin-top: 20px;
+	margin-left: 20px;
+    color: white;
+}
+.c-right p {
+	margin:20px 0 0 20px;
+	font-size: 13px;
+	color: white;
+	line-height: 23px;
+	letter-spacing: 2px;
+}
+.c-right img {
+	width: 100px;
+	height: 30px;
+	color: white;
+	position: absolute;
+	right: 80px;
+	top: 220px;
+}
+.footer {
+	width: 100%;
+	height: 130px;
+	background-color: #2B1426;
+	position: relative;
+	float: right;
+}
+.footer img {
+	position: absolute;
+	right: 1050px;
+	top: 35px;
+}
+.f-right {
+	float: right;
+	margin: 35px 400px;
+}
+.f-right ul li{
+    display: inline-block;
+} 
+.f-right ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 12px;
+}
+.f-right .th {
+	margin: 25px 0 0 10px;
+	color: white;
+}
+.f-right .th p {
+	margin-bottom: 10px;
+}
+

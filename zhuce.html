@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页面</title>
+	<link rel="stylesheet" href="./css/zhuce.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<script>
+		window.onload=function(){
+             var btn1=document.getElementById("btn1");
+             var p2=document.getElementById("p2");
+             console.log(p2);
+             var p3=document.getElementById("p3");
+             btn1.onclick=function(){
+             	var reg1=/^[a-zA-Z]\w{5,11}$/ig;
+             	var reg2=/^[a-zA-Z]\w{5,11}$/ig;
+             	var a=reg1.test(p2.value);
+             	var b=reg2.test(p3.value);
+             	if(a&&b){
+             		if(p2.value==p3.value){
+             			return true;
+             		}else{
+             			alert("与密码输入不符");
+             			return false;
+             		}
+             	}else {
+             		alert("请重新输入密码");
+             		return false;
+             	}
+            }
+		}
+	</script>
+</head>
+<body>
+	<div class="zhuce">
+		<div class="header">
+			<span>注册</span>
+            <img src="./images/chu.png" alt="">
+            <div class="sy">
+            	<p class="s1"><a href="">手机号注册</a></p>
+                <p class="s2">邮箱注册</p>
+            </div>
+                <form action="zhuye.html">
+	                	<div class="shouji"> 
+			            <p>手机号码|&nbsp;</p>
+			            <input class="tel" type="tel" name="tel" placeholder="请输入手机号" pattern="[0-9]{11}" autofocus="">
+	                </div>
+		            <div class="only">
+			            <div class="yanzheng">
+			                <p class="p1">验证码|&nbsp;</p>
+				            <input  class="nu" type="number" name="number" placeholder="请输入验证码">
+				        </div> 
+		                <button class="btn">发送验证码</button>
+		            </div>
+		            <div class="mima">
+		            	<p class="p2">密码|&nbsp;</p>
+		            	<input  class="psw" type="password" name="psw" placeholder="请输入密码" id="p2">
+		            	<img src="./images/9.png" alt="" class="img1">
+		            	<img src="./images/jinzhi.png" alt="" class="img2">
+		            </div>
+		            <div class="qr">
+		            	<p class="p3" >确认密码</p>
+		            	<input class="queren" type="password" name="psw" placeholder="请再次确认密码" id="p3">
+		            	<img src="./images/9.png" alt="" class="img3">
+		            	<img src="./images/jinzhi.png" alt="" class="img4">
+		            </div>
+	                <input  class="tongyi" type="checkbox" name="checkbox" value="我已阅读并同意">我已阅读并同意<a href="">StarGame用户协议</a>
+	                <br>
+	                <button class="btnl" id="btn1">同意协议并注册</button>
+                </form>
+		</div>
+	</div>
+</body>
+</html>

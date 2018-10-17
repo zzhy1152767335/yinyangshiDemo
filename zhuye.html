@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主页</title>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/zhuye.css">
+	<link rel="stylesheet" href="./css/bootstrap-3.3.0-dist/css/bootstrap.min.css">
+	<script src="./js/jquery-2.1.4/jquery.min.js"></script>
+	<script src="./css/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+	<script>
+		window.onload=function(){
+			var fuji=document.getElementById("middle");
+			var imgs=document.getElementsByClassName("imgs");
+			var aa=document.getElementsByClassName("aa");
+            var middle=document.getElementsByClassName("c-middle");
+            console.log(middle);
+            var quan1=document.getElementById("quan1").children;
+            console.log(quan1);
+            fuji.style.left="-290px";
+            var ind=0;
+			function next(){
+				ind++;
+				if(ind>2){
+					ind=0;
+				}
+				var newleft;
+               if(fuji.style.left=="-580px"){
+               	newleft=-0;
+               }else{
+               	newleft=parseInt(fuji.style.left)-290;
+               }
+               fuji.style.left=newleft+"px";
+               quantu();
+			}
+			function precious(){
+				ind--;
+				if(ind<0){
+					ind=2;
+				}
+				var newleft;
+				if(fuji.style.left=="0px"){
+					newleft=-580;
+				}else {
+					newleft=parseInt(fuji.style.left)+290;
+				}
+				fuji.style.left=newleft+"px";
+				quantu();
+			}
+            aa[0].onclick=function(){
+                 precious();
+            }
+            aa[1].onclick=function(){
+            	next();
+            }
+            var id1;
+			function setInter(){
+				id1=setInterval(function(){
+					next();
+				},2000);
+			}
+			setInter();
+            middle.onmouseover=function(){
+                clearInterval(id1);
+            }
+            middle.onmouseout=function(){
+            	setInter();
+            }
+
+        function quantu (){
+        	var len=quan1.length;
+        	for(var i=0;i<len;i++){
+        		quan1[i].className="";
+        	}
+        	quan1[ind].className="current";
+        }
+         Array.prototype.slice.call(quan1).forEach(function(item,index,quan){
+        	item.onclick=function(){
+        		var cha=ind-index;
+	        	fuji.style.left=(parseInt(fuji.style.left)+cha*290)+"px";
+	        	ind=index;
+	        	quantu();
+        	}
+        });
+	}
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="logo"><img src="./images/2.png" alt="" class="img"></div>
+			<div class="tubiao">
+			    <span>
+				    <img src="./images/1.png" alt="" class="img1">
+				    <a href="denglu.html">请登录&nbsp;|&nbsp;</a>
+			    </span>
+			    <span><a href="zhuce.html">注册</a></span>
+			    <span>
+				    <a href="#">全部游戏</a>
+				    <img src="./images/3.png" alt="" class="img2">
+			    </span>
+			</div>
+		</div>
+		<div class="section">
+			<img src="./images/4.jpg" alt="" width="100%" height="600px">
+			<!-- <div class="xz">
+				<div class="erweima">
+					<img src="./images/saoma.png" alt="" width="100px" height="90px">
+				</div>
+				<div class="xiazai">
+					<div class="bo andriod">
+						<a href="#">Andriod下载</a>
+					</div>
+					<div class="bo ios">
+						<a href="#">iOS下载</a>
+					</div>
+					<div class="bo pc">
+						<a href="#">PC端下载</a>
+					</div>
+					
+				</div>
+			</div> -->
+		</div>
+		<div class="center">
+			<div class="c-left">
+				<div class="xin container">
+					<ul class="nav nav-tabs">
+						<li><a href="#one" data-toggle="tab">新闻</a></li>
+						<li><a href="#two" data-toggle="tab">活动</a></li>
+						<li><a href="#three" data-toggle="tab">攻略</a></li>
+					</ul>
+					<img src="./images/4.png" alt="">
+				</div>
+				<div class="tab-content">
+					<div class="c-l-bottom tab-pane active" id="one">
+            <p>
+							<img src="./images/5.png" alt="">
+							<span>《阴阳师》夏日花火会开启，玉藻前结界 07-10</span>
+						</p>
+						<p>
+							<img src="./images/5.png" alt="">
+							<span>《阴阳师》夏日花火会开启，玉藻前结界 07-06</span>
+						</p>
+						<p>
+							<img src="./images/5.png" alt="">
+							<span>《阴阳师》夏日花火会开启，玉藻前结界 07-04</span>
+						</p>
+						<p>
+							<img src="./images/5.png" alt="">
+							<span>《阴阳师》夏日花火会开启，玉藻前结界 07-04</span>
+						</p>
+						<p>
+							<img src="./images/5.png" alt="">
+							<span>《阴阳师》夏日花火会开启，玉藻前结界&nbsp;06-27</span>
+						</p>
+						<p>
+							<img src="./images/5.png" alt="">
+							<span>《阴阳师》夏日花火会开启，玉藻前结界&nbsp;06-25</span>
+					  </p>
+            <p>
+							<img src="./images/5.png" alt="">
+							<span>《阴阳师》夏日花火会开启，玉藻前结界&nbsp;06-25</span>
+					    </p>
+					  <p>
+							<img src="./images/5.png" alt="">
+							<span>《阴阳师》夏日花火会开启，玉藻前结界&nbsp;06-25</span>
+					    </p>
+				  </div>
+					<div class="tab-pane" id="two">活动中的内容~~~~~~</div>
+					<div class="tab-pane" id="three">攻略中的内容~~~~~~~~</div>
+				</div>
+			</div>
+			<div class="c-middle">
+				<div id="middle">
+					<img src="./images/5.jpg" alt="0" width="290" height="260" class="imgs">
+					<img src="./images/21.jpg" alt="-290" width="290" height="260" class="imgs">
+					<img src="./images/23.jpg" alt="-580" width="290" height="260" class="imgs">
+					<img src="./images/25.jpg" alt="-870" width="290" height="260" class="imgs">
+                </div>
+                <div id="quan1">
+                	<span class="current">1</span>
+                	<span>2</span>
+                	<span>3</span>
+                </div>
+                <a class="aa"><</a>
+                <a class="aa"> ></a>
+			</div>
+			<div class="c-right">
+				<h2>游戏简介</h2>
+				<p>结界震荡，流云乱舞，最近的平安京似乎又将引来一场波。《阴阳师》全新资料片第二弹“新年祭-年始初诣”拉开序幕，呆萌的呱太，愤怒的石距陆续来袭，请各位阴阳师做好应战准备！还有更多惊喜活动等你来看！</p>
+				<img src="./images/6.png" alt="">
+			</div>
+		</div>
+		<div class="footer">
+			<div class="f-left">
+				<img src="./images/13.png" alt="" width="60px" height="60px">
+			</div>
+			<div class="f-right">
+				<ul>
+					<li><a href="#">&nbsp;关于StarGame&nbsp;|</a> 
+					</li>
+					<li><a href="#">&nbsp;招聘信息&nbsp;|</a>
+					</li>
+					<li><a href="#">&nbsp;用户协议&nbsp;|</a>
+					</li>
+					<li><a href="#">&nbsp;法律协议&nbsp;|</a>
+					</li>
+					<li><a href="#">&nbsp;家长监护&nbsp;|</a>
+					</li>
+					<li><a href="#">&nbsp;网站地图&nbsp;</a>
+					</li>
+				</ul>
+			
+					<div class="th">
+						<p class="on">渝ICP备14007792号-4&nbsp;&nbsp;&nbsp;&nbsp;渝网文[2015]1041-1042号</p>
+				    <p class="tw">重庆星游传媒有限公司&nbsp;Copyringht &copy;&nbsp;2014-2015</p>
+					</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

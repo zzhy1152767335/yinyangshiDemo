@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/denglu.css">
+	<script>
+		onload=function(){
+			var btn=document.getElementById("btn");
+			var user=document.getElementById("user");
+			var psw=document.getElementById("psw");
+			var inp=document.getElementById("inp");
+			console.log(inp);
+			inp.onclick=function(){
+				var reg1=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/ig;//邮箱
+                // var reg3=/^\w+$/ig;//账号
+                // var reg4=/^[0-9]{11}*$/ig;
+				var reg2=/^[a-zA-Z]\w{5,11}$/ig;
+				var a=reg1.test(user.value);
+				// alert(psw.value);
+				// var a1=reg2.test(user.value);
+				// var a2=reg3.test(user.value);
+				var b=reg2.test(psw.value);
+				//alert(b);
+                if(a){
+                	if(b){
+                		 return true;
+                		//alert("--");
+	                }else{
+	                	alert("您输入的账号有误");
+	                	return false;
+	                	
+	                }
+                // if(a1&&b){
+                // 	return true;
+                // }else {
+                // 	return false;
+                // 	alert("您输入的不符");
+                // }
+                // if(a2&&b){
+                // 	return true;
+                // }else {
+                // 	return false;
+                // 	alert("您输入的不符");
+                 }
+		   }
+		}
+	</script>
+</head>
+<body>
+	<div class="login">
+		<div class="header">
+			<span>登录账号</span>
+            <img src="./images/chu.png" alt="">
+		</div>
+		<form action="zhuye.html">
+			<input class="user" id="user" type="text" name="username" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入账号/邮箱/手机号"> <br>
+			<input class="psw" id="psw" type="password" name="psw" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入密码"> <br>
+			<input type="checkbox" name="checkbox" checked="" id="cb">
+			<label for="cb" class="la">下次自动登录</label>
+			<span>忘记密码</span> <br>
+			<input type="submit" value="马上登录" id="inp"> <br>
+		</form>
+		<div class="sa">
+			<span class="zhanghao">没有账号？</span> 
+			<a href="zhuce.html">立即注册</a> <br>
+		</div>
+			<div class="box one">
+				<img src="./images/10.png" alt="">
+			</div>
+			<div class="box two">
+				<p>第三方登录</p>
+                <img src="./images/11.png" alt="">
+			</div>
+			<div class="box three">
+				<img src="./images/12.png" alt="">
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
